@@ -26,6 +26,7 @@ int main() {
   
   
   */
+ cout<<"Hello world"<<endl;
 cout<<"Namaste dunia"<<endl;
  int a=56;
   cout<<a<<endl;
