@@ -23,3 +23,6 @@ int main(){
     cout<<minimum_jump(v)<<endl;
     return 0;
 }
+
+
+
