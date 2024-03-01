@@ -7,15 +7,15 @@ struct TreeNode {
   TreeNode* right;
   TreeNode(int x) : val(x), left(NULL), right(NULL) {}
 };
-bool ismirror(TreeNode* root1,TreeNode* root2){
-    if(root1==NULL && root2==NULL){
+bool ismirror(TreeNode* left,TreeNode* right){
+    if(left==NULL && right==NULL){
         return true;
     }
-    if(root1==NULL || root2==NULL){
+    if(left==NULL || right==NULL){
         return false;
     }
 
-    return (root1->val==root2->val)&&ismirror(root1->left,root2->right)&&(root1->right,root2->left);
+    return (left->val==right->val)&&ismirror(left->left,right->right)&&ismirror(left->right,right->left);
 }
 bool isSymmetric(TreeNode* root) {
     return ismirror(root,root);
