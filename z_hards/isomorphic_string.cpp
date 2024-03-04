@@ -2,19 +2,19 @@
 using namespace std;
 bool isisomorphic(string str1,string str2){
     int n = str1.length();
-    unordered_map<char,char> replacement;
-    unordered_map<char,bool> used;
+    unordered_map<char,char> mp1;
+    unordered_map<char,bool> flag;
     for(int i = 0;i<str1.size();i++){
-        if(replacement.count(str1[i])){
-            if(replacement[str1[i]]!=str2[i]){
+        if(mp1.count(str1[i])){
+            if(mp1[str1[i]]!=str2[i]){
                 return false;
             }
         }else{
-            if(used[str2[i]]){
+            if(flag[str2[i]]){
                 return false;
             }
-            replacement[str1[i]] = str2[i];
-            used[str2[i]] = true;
+            mp1[str1[i]] = str2[i];
+            flag[str2[i]] = true;
         }
     }
     return true;
@@ -30,3 +30,6 @@ int main(){
     }
     return 0;
 }
+
+
+
