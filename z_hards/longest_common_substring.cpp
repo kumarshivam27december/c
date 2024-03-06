@@ -6,7 +6,6 @@ public:
         int n = nums.size();
         if(n==0) return 0;
         sort(nums.begin(),nums.end());
-        int count = 0;
         int current = 1;
         int longest = 0;
         for(int i = 1;i<n;i++){
@@ -19,11 +18,11 @@ public:
                 }
             }
         }
-        return longest;
+        return max(longest,current);
     }
 };
 int main() {
-    vector<int> nums = {100, 4, 200, 1, 3, 2,-1,0,5,201,202,205,204,203,101,106,105,104,103,102,101,99,98,97};  
+    vector<int> nums = {0,3,7,2,5,8,4,6,0,1};  
     Solution sol;
     int result = sol.longestConsecutive(nums);
     cout << "Longest consecutive sequence: " << result << endl;
@@ -44,6 +43,71 @@ int main() {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+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
+*/
 
 
 
