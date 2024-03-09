@@ -13,19 +13,19 @@ using namespace std;
 int main(){
 
 
-    HANDLE console_color; 
+   //  HANDLE console_color; 
     
-    console_color = GetStdHandle( STD_OUTPUT_HANDLE); 
+   // //  console_color = GetStdHandle( STD_OUTPUT_HANDLE); 
 
 
-    SetConsoleTextAttribute(console_color, 1); 
+   //  SetConsoleTextAttribute(console_color, 1); 
 
 
     cout<<"^^^^^^^^^^^^^^^^^^^^^^^^^^^"<<endl;
     cout<<"^^^^^^^^^^^^^^^^^^^^^^^^^^^"<<endl;
 
 
-    SetConsoleTextAttribute(console_color, 2); 
+   //  SetConsoleTextAttribute(console_color, 2); 
     cout<<"---------------------------"<<endl;
     cout<<"WELCOME TO A WONDERFUL GAME"<<endl;
     cout<<"---------------------------"<<endl;
@@ -33,7 +33,7 @@ int main(){
     cout<<"---------------------------"<<endl;
     cout<<"---------------------------"<<endl;
 
-    SetConsoleTextAttribute(console_color, 3); 
+   //  SetConsoleTextAttribute(console_color, 3); 
     cout<<" You need to know the rule "<<endl;
     cout<<"First Rule :"<<endl;
     cout<<"You must follow all the rule strictly"<<endl;
@@ -50,7 +50,7 @@ int main(){
     cout<<"---------------------------"<<endl;
   
 
-    SetConsoleTextAttribute(console_color, 4); 
+   //  SetConsoleTextAttribute(console_color, 4);
 
 
     cout<<"You will be given assistance or lifeline"<<"\n";
@@ -63,18 +63,18 @@ int main(){
    int pyf = 0;
    int rq=0;
 
-    SetConsoleTextAttribute(console_color, 5); 
+   //  SetConsoleTextAttribute(console_color, 5); 
     cout<<"---------------------------"<<endl;
     cout<<"---------------------------"<<endl;
 
     cout<<"LETS BEGIN THE GAME"<<endl;
     cout<<"^^^^^^^^^^^^^^^^^^^^^^^^^^^"<<endl;
     cout<<"^^^^^^^^^^^^^^^^^^^^^^^^^^^"<<endl;
-    SetConsoleTextAttribute(console_color, 6); 
+   //  SetConsoleTextAttribute(console_color, 6); 
     cout<<"Do you want start the game \nif yes press Y or any other key to exit\n";
     char start;cin>>start;
     if(start=='Y' || start=='y'){
-         SetConsoleTextAttribute(console_color, 7); 
+         // SetConsoleTextAttribute(console_color, 7); 
          cout<<"Starting the game\n";
          cout<<"LEVEL 1\n";
          int level = 1;
@@ -92,7 +92,7 @@ int main(){
 
          
          if(qn1 == 'A' || qn1 == 'a'){
-         SetConsoleTextAttribute(console_color, 10); 
+         // SetConsoleTextAttribute(console_color, 10); 
 
             cout<<"You are correct\n";
             initial_amount = 1000;
@@ -111,7 +111,7 @@ int main(){
             char f;cin>>f;
             if(f=='D'||f=='d'){
 
-               SetConsoleTextAttribute(console_color, 5); 
+               // SetConsoleTextAttribute(console_color, 5); 
 
                cout<<"You are correct\n";
                cout<<"You have won $5000 "<<endl;
@@ -128,25 +128,25 @@ int main(){
                cout<<"IF YOU WANT HELP PRESS H\n";
                char an;cin>>an;
                if( an =='D'||an=='d'){
-                   SetConsoleTextAttribute(console_color, 12); 
+                  //  SetConsoleTextAttribute(console_color, 12); 
 
                   cout<<"You are correct \n You have won $20,000\n";
                   cout<<"If you want to continue this game press 'Y' or 'y'\n else select any other key to exit the game\n";
                   char m;cin>>m;
                   if(m=='Y'||m=='y'){
-                     SetConsoleTextAttribute(console_color, 2);
+                     // SetConsoleTextAttribute(console_color, 2);
                      cout<<"Welcome to the LEVEL 4"<<endl;
                      cout<<"What is the largest organ in the human body?\nA. Liver\nB. Heart\nC. Skin\nD. Brain\n";
                      char ans1 ;cin>>ans1;
                      if(ans1=='c'||ans1=='C'){
-                        SetConsoleTextAttribute(console_color, 13); 
+                        // SetConsoleTextAttribute(console_color, 13); 
 
                         cout<<"You are correct \n";
                         cout<<"You have won $50,000\n";
                         cout<<"Do you want to continue press 'Y' or 'y' else any key to exit\n";
                         char exit1;cin>>exit1;
                         if(exit1=='Y' || exit1=='y'){
-                           SetConsoleTextAttribute(console_color, 14); 
+                           // SetConsoleTextAttribute(console_color, 14); 
 
                            cout<<"So , you wanted to continue this game\n";
                            cout<<"if, so then continue this \n";
@@ -155,7 +155,7 @@ int main(){
                            cout<<"Which programming language is used for creating dynamic web pages?\nA. Java\nB. Python\nC. JavaScript\nD. C++\n";
                            char ans2;cin>>ans2;
                            if(ans2=='c' ||ans2=='C'){
-                              SetConsoleTextAttribute(console_color, 6); 
+                              // SetConsoleTextAttribute(console_color, 6); 
 
                               cout<<"Hurray! you are correct\n ";
                               cout<<"You have won $100,000\n";
@@ -165,9 +165,9 @@ int main(){
                                  
                                  cout<<"You have to continue the game\n";
                                  cout<<"Level 6\n";
-                                 SetConsoleTextAttribute(console_color, 2);
+                                 // SetConsoleTextAttribute(console_color, 2);
                                  cout<<"Here is the next question \n";
-                                 cout<<"Who is known as the 'Iron Man of India?\nA. Jawaharlal Nehru\nB. Sardar Vallabhbhai Patel\nC. Subhas Chandra Bose\nD. Mahatma Gandhi\n";
+                                 // cout<<"Who is known as the 'Iron Man of India?\nA. Jawaharlal Nehru\nB. Sardar Vallabhbhai Patel\nC. Subhas Chandra Bose\nD. Mahatma Gandhi\n";
                                  char ans3;cin>>ans3;
                                  if (ans3=='B' ||ans3=='b')
                                  {
@@ -198,7 +198,7 @@ int main(){
                                               cout<<"Thats is an absolutely correct answer\n";
                                               cout<<"And you have won a million dollar\n";
                                               cout<<"Congrats you have nailed it\n";
-                                              cout<<"Thanks for joining see you again\n";
+                                             //  cout<<"Thanks for joining see you again\n";
                                               cout<<"Exiting the game";
                                               return 0;
                                           }else if(ans4=='H' ||ans4=='h'){
@@ -254,29 +254,29 @@ int main(){
                                  //continue the game
 
                               }else{
-                                          SetConsoleTextAttribute(console_color, 15);
+                                          // SetConsoleTextAttribute(console_color, 15);
                                           cout<<"So you wanted to quiet the game \nso the total amount you won is $100,000\n";
                                           cout<<"Hope you enjoyed the game\n";
-                                          cout<<"Thanks for all of your love and support\n";
+                                          // cout<<"Thanks for all of your love and support\n";
                                           return 0;
                               }
                            }
 
 
                         }else{
-                           SetConsoleTextAttribute(console_color, 15);
+                           // SetConsoleTextAttribute(console_color, 15);
                            cout<<"So you wanted to quiet the game \nso the total amount you won is $50,000\n";
                            cout<<"Hope you enjoyed the game\n";
-                           cout<<"Thanks for all of your love and support\n";
+                           // cout<<"Thanks for all of your love and support\n";
                            return 0;
                         }
                      }
 
                   }else{
-                     SetConsoleTextAttribute(console_color, 16);
+                     // SetConsoleTextAttribute(console_color, 16);
                      cout<<"So you wanted to quiet the game \nso the total amount you won is $20,000\n";
                      cout<<"Hope you enjoyed the game\n";
-                     cout<<"Thanks for all of your love and support\n";
+                     // cout<<"Thanks for all of your love and support\n";
                      return 0;
                   }
                }
@@ -284,7 +284,7 @@ int main(){
                //code here
             }else if(f=='H'||f=='h'){
                   //applying switch case here 
-                  SetConsoleTextAttribute(console_color, 17);
+                  // SetConsoleTextAttribute(console_color, 17);
                    cout<<"So you need help\n";
                    cout<<"Alright! \n";
                    cout<<"Choose\n1-> for 50:50\n2-> for phone your friend\n3->for question swap\n";
@@ -377,7 +377,7 @@ int main(){
                                                          cout<<"Thats is an absolutely correct answer\n";
                                                          cout<<"And you have won a million dollar\n";
                                                          cout<<"Congrats you have nailed it\n";
-                                                         cout<<"Thanks for joining see you again\n";
+                                                         // cout<<"Thanks for joining see you again\n";
                                                          cout<<"Exiting the game";
                                                          return 0;
                                                       }else{
@@ -392,7 +392,7 @@ int main(){
                                                    cout<<"As you have opted to quit the game\n";
                                                    cout<<"The total amount you have won is $500,000\n";
                                                    cout<<"you can take that with you\n";
-                                                   cout<<"Thanks for the your time in this game\n";
+                                                   // cout<<"Thanks for the your time in this game\n";
                                                    cout<<"Exiting the game\n";
                                                    return 0;
                                                    }
@@ -402,7 +402,7 @@ int main(){
 
                                              }else{
                                                    cout<<"As you have opted to quit the game\n";
-                                                   cout<<"Thanks for the your time in this game\n";
+                                                   // cout<<"Thanks for the your time in this game\n";
                                                    cout<<"Exiting the game\n";
                                                    return 0;
                                              }
@@ -416,7 +416,7 @@ int main(){
                                        
                                     }else{
                                        cout<<"As you have opted to quit the game\n";
-                                       cout<<"Thanks for the your time in this game\n";
+                                       // cout<<"Thanks for the your time in this game\n";
                                        cout<<"Exiting the game\n";
                                        return 0;
                                     }
@@ -430,7 +430,7 @@ int main(){
                                  
                               }else{
                                     cout<<"As you have opted to quit the game\n";
-                                    cout<<"Thanks for the your time in this game\n";
+                                    // cout<<"Thanks for the your time in this game\n";
                                     cout<<"Exiting the game\n";
                                     return 0;
                               }
@@ -444,7 +444,7 @@ int main(){
                         }else
                         {
                            cout<<"As you have opted to quit the game\n";
-                           cout<<"Thanks for the your time in this game\n";
+                           // cout<<"Thanks for the your time in this game\n";
                            cout<<"Exiting the game\n";
                            return 0;
                         }
@@ -460,7 +460,7 @@ int main(){
                      break;
                   case 3:
                      cout<<"replacing the question\n";
-                     SetConsoleTextAttribute(console_color, 18);
+                     // SetConsoleTextAttribute(console_color, 18);
                      rq++;
                      cout<<"which fish does not lay eggs?\n";
                      cout<<"A)gold fish\n";
@@ -471,7 +471,7 @@ int main(){
 
                      char k;cin>>k;
                      if(k=='B' || k=='b'){
-                        SetConsoleTextAttribute(console_color, 5);
+                        // SetConsoleTextAttribute(console_color, 5);
                         cout<<"Correct you can go head"<<endl;
                         initial_amount = 5000;
                         cout<<"You have won "<<initial_amount<<endl;
@@ -483,7 +483,7 @@ int main(){
                         cout<<"Who was the famous queen of ancient Egypt known for her beauty and intelligence?\nA. Cleopatra\nB. Nefertiti\nC. Hatshepsut\nD. Isis\n";
                         char ans;cin>>ans;
                         if(ans=='A'||ans =='a'){
-                           SetConsoleTextAttribute(console_color, 6);
+                           // SetConsoleTextAttribute(console_color, 6);
                            cout<<"You are correct\n";
                            initial_amount = 1000;
                            cout<<"You have won "<<initial_amount<<endl;
@@ -514,11 +514,11 @@ int main(){
 
 
             }else{
-                  SetConsoleTextAttribute(console_color, 4);
+                  // SetConsoleTextAttribute(console_color, 4);
                   cout<<"Oooo ! you are wrong !"<<endl;
                   cout<<"The correct option was D Yuan is the currency of china\n";
                   cout<<"Your total amount is $0"<<endl;
-                  cout<<"Thanks for the game \nMeet you in the next game\n";
+                  // cout<<"Thanks for the game \nMeet you in the next game\n";
                   cout<<"Exiting the game"<<endl;
                   return 0;
 
@@ -527,7 +527,7 @@ int main(){
 
             
          }else if(qn1 == 'H' || qn1 == 'h'){
-            SetConsoleTextAttribute(console_color, 3);
+            // SetConsoleTextAttribute(console_color, 3);
             cout<<"So you need help\n";
             cout<<"Alright! \n";
             cout<<"Choose\n1-> for 50:50\n2-> for phone your friend\n3->for question swap\n";
@@ -853,7 +853,7 @@ int main(){
                               cout<<"According to your friend A is the answer\n";
                               char anspyf2;cin>>anspyf2;
                               cout<<"Press key A or a as your friend said\n";
-                              cout<<"else any other answer you may want to give other than your friend one\n";
+                              // cout<<"else any other answer you may want to give other than your friend one\n";
                               if(anspyf2=='A'||anspyf2=='a'){
                                  cout<<"Thats absolutely correct answer\n";
                                  cout<<"You have won this level worth $20,000\n";
@@ -981,8 +981,8 @@ int main(){
         //code here
 
     }else{
-         SetConsoleTextAttribute(console_color, 2); 
-        cout<<"Thanks for you response\nExiting the game\n";
+         // SetConsoleTextAttribute(console_color, 2); 
+      //   cout<<"Thanks for you response\nExiting the game\n";
         return 1;
     }
 
