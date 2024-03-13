@@ -22,40 +22,8 @@ ListNode *revList(ListNode *head)
 }
 ListNode *reverseBetween(ListNode *head, int left, int right)
 {
-    if (left == right)
-        return head;
-    ListNode *prev = NULL;
-    int l = 1;
-    ListNode *temp = head;
-    while (l < left)
-    {
-        prev = temp;
-        temp = temp->next;
-        l++;
-    }
-    int r = 1;
-    ListNode *temp2 = head;
-    while (r < right)
-    {
-        temp2 = temp2->next;
-        r++;
-    }
-    ListNode *last = NULL;
-    if (temp2->next)
-    {
-        last = temp2->next;
-        temp2->next = NULL;
-    }
-    if (prev)
-    {
-        prev->next = revList(temp);
-    }
-    else
-    {
-        head = revList(temp);
-    }
-    temp->next = last;
-    return head;
+    
+    
 }
 ListNode* createList(vector<int>& data) {
     ListNode* head = nullptr;
@@ -102,3 +70,47 @@ int main() {
 
     return 0;
 }
+
+
+
+/*
+//alter way
+ListNode *reverseBetween(ListNode *head, int left, int right)
+{
+    if (left == right)
+        return head;
+    ListNode *prev = NULL;
+    int l = 1;
+    ListNode *temp = head;
+    while (l < left)
+    {
+        prev = temp;
+        temp = temp->next;
+        l++;
+    }
+    int r = 1;
+    ListNode *temp2 = head;
+    while (r < right)
+    {
+        temp2 = temp2->next;
+        r++;
+    }
+    ListNode *last = NULL;
+    if (temp2->next)
+    {
+        last = temp2->next;
+        temp2->next = NULL;
+    }
+    if (prev)
+    {
+        prev->next = revList(temp);
+    }
+    else
+    {
+        head = revList(temp);
+    }
+    temp->next = last;
+    return head;
+}
+
+*/
