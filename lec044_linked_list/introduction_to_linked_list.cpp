@@ -1,3 +1,24 @@
+
+/*
+
+linked list is a dynamic data structute
+it can be changed at run time size->  grow/shrink
+less memory wastage
+no shifting needed in insertion or deletion unlike array
+it is collection of various nodes
+each nodes constituetes of a data and next data address
+
+
+
+singly linked list
+doubly linked list
+circular linked list
+circular  doubly linked list
+
+*/
+
+
+
 #include <bits/stdc++.h>
 using namespace std;
 class Node{
