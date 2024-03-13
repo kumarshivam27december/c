@@ -1,14 +1,10 @@
 #include <bits/stdc++.h>
 using namespace std;
-
-// Node structure for the linked list
 struct Node
 {
     int data;
     Node *next;
 };
-
-// Function to create a new node
 Node *createNode(int data)
 {
     Node *newNode = new Node();
@@ -16,8 +12,6 @@ Node *createNode(int data)
     newNode->next = nullptr;
     return newNode;
 }
-
-// Function to insert a node at the end of the linked list
 Node *insertNode(Node *head, int data)
 {
     Node *newNode = createNode(data);
@@ -25,7 +19,6 @@ Node *insertNode(Node *head, int data)
     {
         return newNode;
     }
-
     Node *current = head;
     while (current->next != nullptr)
     {
@@ -34,8 +27,6 @@ Node *insertNode(Node *head, int data)
     current->next = newNode;
     return head;
 }
-
-// Function to print the linked list
 void printList(Node *head)
 {
     Node *current = head;
@@ -46,47 +37,40 @@ void printList(Node *head)
     }
     cout << endl;
 }
-
-// Function to reverse the linked list (this is the function you need to implement)
 Node *reverseList(Node *head)
 {
-    if(head==NULL){
-        return NULL;
-    }
-    if(head->next==NULL){
+    if(head==NULL ||head->next==NULL){
         return head;
     }
 
-    Node* previous = NULL;
-    Node* current = head;
-    while(current != NULL){
-        Node* forward = current->next;
-        current->next = previous;
-        previous = current;
-        current = forward;
+    stack<int> stk;
+    Node* temp = head;
+    while(temp!=NULL){
+        stk.push(temp->data);
+        temp=temp->next;
     }
 
-    head = previous;
+    Node* reverelist = createNode(stk.top());
+    Node* ptr = reverelist;
+    while(!stk.empty()){
+        ptr->next = createNode(stk.top());
+        stk.pop();
+        ptr=ptr->next;
+    }
 
-    return head;
+    return reverelist->next;
 }
 
 int main()
 {
-    Node *head = nullptr; // Initially empty list
-
-    // Create some nodes and insert them into the list
+    Node *head = nullptr;
     head = insertNode(head, 1);
     head = insertNode(head, 2);
     head = insertNode(head, 3);
-
     cout << "Original list: ";
     printList(head);
-
-    head = reverseList(head); // Call the function to reverse the list
-
+    head = reverseList(head); 
     cout << "Reversed list: ";
     printList(head);
-
     return 0;
 }
