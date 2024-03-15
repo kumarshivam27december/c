@@ -1,14 +1,15 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-class ListNode {
+class ListNode
+{
 public:
-    int val; // Using 'val' for consistency with common practice
-    ListNode* next;
+    int val;
+    ListNode *next;
 
     ListNode() : val(0), next(nullptr) {}
     ListNode(int x) : val(x), next(nullptr) {}
-    ListNode(int x, ListNode* next) : val(x), next(next) {}
+    ListNode(int x, ListNode *next) : val(x), next(next) {}
 };
 
 ListNode *revList(ListNode *head)
@@ -20,20 +21,78 @@ ListNode *revList(ListNode *head)
     head->next = NULL;
     return temp;
 }
+
+
+/*
+
+ListNode *dummy = new ListNode(0);
+    dummy->next = head;
+    ListNode *leftpre = dummy;
+    ListNode *currNode = head;
+    for (int i = 0; i < left - 1; i++)
+    {
+        leftpre = leftpre->next;
+        currNode = currNode->next;
+    }
+
+    ListNode *sublisted = currNode;
+    ListNode *preNode = NULL;
+    for (int i = 0; i <= right - left; i++)
+    {
+        ListNode *forward = currNode->next;
+        currNode->next = preNode;
+        preNode = currNode;
+        currNode = forward;
+    }
+    // join the last pieces
+    leftpre->next = preNode;
+    sublisted->next = currNode;
+
+    return dummy->next;
+
+*/
 ListNode *reverseBetween(ListNode *head, int left, int right)
 {
-    
-    
-}
-ListNode* createList(vector<int>& data) {
-    ListNode* head = nullptr;
-    ListNode* tail = nullptr;
+    ListNode* dummy = new ListNode(0);
+    dummy->next = head;
+    ListNode* lefty = dummy;
+    ListNode* curr = head;
 
-    for (int value : data) {
-        ListNode* newNode = new ListNode(value);
-        if (head == nullptr) {
+    for(int i =0;i<left-1;i++){
+        lefty=lefty->next;
+        curr = curr->next;
+    }
+
+    ListNode* anslist = curr;
+    ListNode* prev = NULL;
+    for(int i =0;i<=right-left;i++){
+        ListNode* forward  = curr->next;
+        curr->next = prev;
+        prev = curr;
+        curr=forward;
+    }
+
+    //join the last two piece
+    lefty->next =prev;
+    anslist->next=curr;
+
+    return dummy->next;
+
+}
+ListNode *createList(vector<int> &data)
+{
+    ListNode *head = nullptr;
+    ListNode *tail = nullptr;
+
+    for (int value : data)
+    {
+        ListNode *newNode = new ListNode(value);
+        if (head == nullptr)
+        {
             head = tail = newNode;
-        } else {
+        }
+        else
+        {
             tail->next = newNode;
             tail = newNode;
         }
@@ -42,23 +101,26 @@ ListNode* createList(vector<int>& data) {
     return head;
 }
 
-void printList(ListNode* head) {
-    ListNode* current = head;
-    while (current != nullptr) {
+void printList(ListNode *head)
+{
+    ListNode *current = head;
+    while (current != nullptr)
+    {
         cout << current->val << " ";
         current = current->next;
     }
     cout << endl;
 }
-int main() {
+int main()
+{
     vector<int> data = {1, 2, 3, 4, 5}; // Sample data for the linked list
-    ListNode* head = createList(data);  // Create the linked list
+    ListNode *head = createList(data);  // Create the linked list
 
     cout << "Original list: ";
-    printList(head);                   // Print the original list
+    printList(head); // Print the original list
 
-    int left = 2;                       // Starting position for reversal
-    int right = 4;                       // Ending position for reversal
+    int left = 2;  // Starting position for reversal
+    int right = 4; // Ending position for reversal
 
     cout << "Reversing sublist between " << left << " and " << right << ":" << endl;
 
@@ -66,12 +128,10 @@ int main() {
     head = reverseBetween(head, left, right);
 
     cout << "Reversed list: ";
-    printList(head);                   // Print the reversed list with the sublist reversed
+    printList(head); // Print the reversed list with the sublist reversed
 
     return 0;
 }
-
-
 
 /*
 //alter way
