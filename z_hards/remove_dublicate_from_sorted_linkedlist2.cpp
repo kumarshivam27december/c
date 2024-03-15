@@ -1,3 +1,59 @@
+#include <bits/stdc++.h>
+#include <vector>
+using namespace std;
+struct ListNode {
+      int val;
+      ListNode *next;
+      ListNode() : val(0), next(NULL) {}
+      ListNode(int x) : val(x), next(NULL) {}
+      ListNode(int x, ListNode *next) : val(x), next(next) {}
+};
+ListNode* deleteDuplicates(ListNode* head) {
+    ListNode* dummy = new ListNode(0);
+    dummy->next = head;
+
+    ListNode* itr = dummy;
+    while(itr->next && itr->next->next){
+        if(itr->next->val==itr->next->next->val){
+            int var = itr->next->val;
+            while(itr->next!=NULL    && itr->next->val==var){
+                itr->next = itr->next->next;
+            }
+        }else{
+            itr=itr->next;
+        }
+    }
+
+    return dummy->next;
+}
+void printList(ListNode* head) {
+    ListNode* current = head;
+    while (current != NULL) {
+        cout << current->val << " ";
+        current = current->next;
+    }
+    cout << endl;
+}
+int main() {
+    // Create a sample linked list with duplicates
+    ListNode* head = new ListNode(1);
+    head->next = new ListNode(1);
+    head->next->next = new ListNode(1);
+    head->next->next->next = new ListNode(2);
+    head->next->next->next->next = new ListNode(3);
+
+
+    cout << "Original list: ";
+    printList(head);
+
+    head = deleteDuplicates(head); // Remove duplicates
+
+    cout << "List after removing duplicates: ";
+    printList(head);
+
+    return 0;
+}
+
 /*
 //wrong approach
 #include <bits/stdc++.h>
