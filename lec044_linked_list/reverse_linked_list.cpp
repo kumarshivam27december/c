@@ -50,10 +50,7 @@ void printList(Node *head)
 // Function to reverse the linked list (this is the function you need to implement)
 Node *reverseList(Node *head)
 {
-    if(head==NULL){
-        return NULL;
-    }
-    if(head->next==NULL){
+    if(head==NULL || head->next==NULL){
         return head;
     }
 
