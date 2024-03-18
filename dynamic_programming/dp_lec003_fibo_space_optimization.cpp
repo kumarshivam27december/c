@@ -17,3 +17,4 @@ int main(){
     }
     cout<<prev1<<endl;
 }
+//the overall time complexity of the code is O(n)
