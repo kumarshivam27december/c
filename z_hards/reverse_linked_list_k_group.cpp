@@ -106,12 +106,12 @@ Node* kReverse(Node* head, int k){
         Node* kThNode = getKthNode(temp, k); 
 
         // If the Kth node is NULL
-        // (not a complete group)
+        // (not a complete group)   
         if(kThNode == NULL){
             // If there was a previous group,
             // link the last node to the current node
             if(prevLast){
-                prevLast -> next = temp; 
+                prevLast -> next = temp;   // linkin the last node to the current node
             }
                 
             // Exit the loop
