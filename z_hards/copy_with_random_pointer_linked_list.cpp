@@ -1,31 +1,31 @@
 #include <bits/stdc++.h>
 using namespace std;
-struct Node {
+struct node {
     int val;
-    Node *next;
-    Node *random;
-    Node(int x = 0) : val(x), next(NULL), random(NULL) {}
+    node *next;
+    node *random;
+    node(int x = 0) : val(x), next(NULL), random(NULL) {}
 };
 
 class Solution {
 public:
-    void insertattail(Node* &head,Node* &tail,int d){
-        Node* newNode = new Node(d);
+    void insertattail(node* &head,node* &tail,int d){
+        node* newNode = new node(d);
         if(head==NULL){
             head = newNode;
-            tail = newNode;
+            tail = newNode; 
             return;
         }else{
             tail->next = newNode;
             tail = newNode;
         }
     }
-    Node* copyRandomList(Node* head) {
+    node* copyRandomList(node* head) {
         //step 1 create the linked list
-        Node* clonehead = NULL;
-        Node* clonetail = NULL;
+        node* clonehead = NULL;
+        node* clonetail = NULL;
 
-        Node* temp = head;
+        node* temp = head;
         while(temp!=NULL){
             insertattail(clonehead,clonetail,temp->val);
             temp = temp->next;
@@ -33,14 +33,17 @@ public:
 
 
         //step 2
-        unordered_map<Node* , Node*> mp;
-        Node* originalnode = head;
-        Node* clonenode =   clonehead;
+        unordered_map<node* , node*> mp;// map original list with the copied list
+        node* originalnode = head;
+        node* clonenode =   clonehead;
         while(originalnode && clonenode){
             mp[originalnode] = clonenode;
             originalnode = originalnode->next;
             clonenode = clonenode->next;
         }
+
+
+
         originalnode = head;
         clonenode = clonehead;
         while(originalnode){
@@ -56,35 +59,35 @@ public:
 };
 
 // Function to print the linked list (for testing purposes)
-void printList(Node* head) {
+void printList(node* head) {
     while (head != nullptr) {
-        std::cout << head->val << " -> ";
+        cout << head->val << " -> ";
         if (head->random) {
-            std::cout << head->random->val;
+            cout << head->random->val;
         } else {
-            std::cout << "NULL";
+            cout << "NULL";
         }
-        std::cout << std::endl;
+        cout << endl;
         head = head->next;
     }
-    std::cout << "NULL" << std::endl;
+    cout << "NULL" << endl;
 }
 
 int main() {
     // Sample linked list (modify as needed for your testing)
-    Node* head = new Node(1);
-    head->next = new Node(2);
-    head->next->next = new Node(3);
-    head->random = head->next->next; // Set random pointer of head to the third Node
+    node* head = new node(1);
+    head->next = new node(2);
+    head->next->next = new node(3);
+    head->random = head->next->next; // Set random pointer of head to the third node
 
     // Create a deep copy of the linked list
     Solution solution;
-    Node* copiedList = solution.copyRandomList(head);
+    node* copiedList = solution.copyRandomList(head);
 
     // Print the original and copied lists
-    std::cout << "Original List:" << std::endl;
+    cout << "Original List:" << endl;
     printList(head);
-    std::cout << "Copied List:" << std::endl;
+    cout << "Copied List:" << endl;
     printList(copiedList);
 
     return 0;
