@@ -12,13 +12,9 @@ int fibo(int n){
 }
 int main(){
     memset(dp,-1,N);
-
     int n;
     cin>>n;
-
-
     //BOTTOM UP APPROACH
-
     dp[0]=0;
     dp[1]=1;
     for(int i =2;i<=n;i++){
