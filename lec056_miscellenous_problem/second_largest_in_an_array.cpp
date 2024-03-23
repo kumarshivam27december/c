@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 int secondlargest(vector<int> &v){
-    
+    /*
     //method 1
     int ans = INT_MIN;
     sort(v.begin(),v.end());
@@ -12,6 +12,28 @@ int secondlargest(vector<int> &v){
         }
     }
     return ans;
+    */
+
+   /*
+   //method 2
+   int largest = v[0];
+   for(int i =0;i<v.size();i++){
+    if(v[i]>largest){
+        largest = v[i];
+    }
+   }
+
+
+   int slargest = v[0];
+   for(int i = 0;i<v.size();i++){
+    if(v[i]>slargest && v[i]<largest){
+        slargest = v[i];
+    }
+   }
+
+   return slargest;
+
+   */
 
 
 }
