@@ -9,12 +9,12 @@ int fibo(int n){
     if(dp[n]!=-1) return dp[n];
     //brute force recursion --> return fibo(n-1)+fibo(n-2);
     return dp[n] = fibo(n-1)+fibo(n-2);
-}
+} 
 int main(){
     memset(dp,-1,N);
     int n;
     cin>>n;
-    //BOTTOM UP APPROACH
+    //BOTTOM UP APPROACH 
     dp[0]=0;
     dp[1]=1;
     for(int i =2;i<=n;i++){
