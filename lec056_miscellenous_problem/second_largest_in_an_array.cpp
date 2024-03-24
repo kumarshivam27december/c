@@ -35,6 +35,20 @@ int secondlargest(vector<int> &v){
 
    */
 
+  //method 3
+  int largest = v[0];
+  int slargest = INT_MIN;
+  for(int i = 1;i<v.size();i++){
+    if(v[i]>largest){
+        slargest = largest;
+        largest=v[i];
+    }else if(v[i]<largest && v[i]>slargest){
+        slargest = v[i];
+    }
+  }
+
+return slargest;
+
 
 }
 int main(){
