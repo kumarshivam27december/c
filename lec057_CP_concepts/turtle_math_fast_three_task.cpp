@@ -19,10 +19,10 @@ int main(){
         }
         int ans = 0;
         if(sum%3==0){
-            ans=0;
+            ans=0;break;
         }
         if((sum+1)%3==0){
-            ans=1;
+            ans=1;break;
         }
         for(int i:v){
             int f = sum-i;
@@ -35,6 +35,7 @@ int main(){
         for(int i:v){
             if(((i+2)%3)==0){
                 ans = 2;
+                break;
             }
         }
         cout<<ans<<endl;
