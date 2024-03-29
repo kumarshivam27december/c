@@ -1,8 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
+#define int long long
 int main(){
     int n;
-    cin>>n;//first
+    cin>>n;
     while(n--){
         int m;
         cin>>m;
@@ -19,10 +20,12 @@ int main(){
         }
         int ans = 0;
         if(sum%3==0){
-            ans=0;break;
+            ans=0;
+            break;
         }
         if((sum+1)%3==0){
-            ans=1;break;
+            ans=1;
+            break;
         }
         for(int i:v){
             int f = sum-i;
@@ -42,5 +45,5 @@ int main(){
 
         
     }
-    return 0;
+    return 0+(0ll);
 }
