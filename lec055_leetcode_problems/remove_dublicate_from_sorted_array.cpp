@@ -1,13 +1,14 @@
 #include <bits/stdc++.h>
 using namespace std;
 int remove_dublicate(vector<int> &v){
-    set<int> s;
-    for(int i =0;i<v.size();i++){
-        s.insert(v[i]);
-    }
-    v.clear();
-    for(auto i:s){
-        v.push_back(i);
+    int i = 0;
+    while (i<v.size()-1)
+    {
+        if(v[i]==v[i+1]){
+            v.erase(v.begin()+i);
+        }else{
+            i++;
+        }
     }
     return v.size();
 }
@@ -19,3 +20,18 @@ int main(){
     }
     return 0;
 }
+
+
+/*
+
+set<int> s;
+    for(int i =0;i<v.size();i++){
+        s.insert(v[i]);
+    }                                              
+    v.clear();
+    for(auto i:s){
+        v.push_back(i);
+    }
+    return v.size();
+
+*/
