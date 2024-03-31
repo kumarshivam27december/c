@@ -17,7 +17,7 @@ int main(){
     int brr[b];
     for(int i=0;i<b;i++){
         cin>>brr[i];
-                h.push_back(brr[i]);
+         h.push_back(brr[i]);
 
     }
 
