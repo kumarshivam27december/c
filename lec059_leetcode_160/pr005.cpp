@@ -21,8 +21,31 @@ Output: 2
 #include <bits/stdc++.h>
 #include <time.h>
 using namespace std;
-int majority(vector<int>&nums){
-    int count = 0;
+int majority(vector<int>&nums){ 
+    int k = nums.size();
+    unordered_map<int,int> mp;
+    for(int element:nums){
+        mp[element]++;
+        if(mp[element]>=k/2){
+            return element;
+        }
+    }
+    return -1;
+}
+int main()
+{
+    clock_t tStart = clock();
+    vector<int> nums = {3,2,3};
+    int ans = majority(nums);
+    cout<<ans;
+    cout<<endl;
+    printf("Time taken: %.2fms", (double)(clock() - tStart)/(CLOCKS_PER_SEC/1000000));
+    return 0;
+}
+
+
+/*
+int count = 0;
         int candidate = 0;
         
         for (int num : nums) {
@@ -39,15 +62,6 @@ int majority(vector<int>&nums){
         
         return candidate;
     
-}
-int main()
-{
-    clock_t tStart = clock();
-    vector<int> nums = {0,0,0,1,1,1,1,2,2,3};
-    int ans = majority(nums);
-    cout<<ans;
-    cout<<endl;
-    printf("Time taken: %.2fms", (double)(clock() - tStart)/(CLOCKS_PER_SEC/1000000));
-    return 0;
-}
 
+
+*/
