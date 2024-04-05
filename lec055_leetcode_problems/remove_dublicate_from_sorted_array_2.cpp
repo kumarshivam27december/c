@@ -11,7 +11,7 @@ int remove_dublicate(vector<int> &arr){
         }
     }
     
-    
+    cout<<index<<endl;
    return index;
 }
 int main()

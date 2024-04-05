@@ -30,3 +30,5 @@ int main(){
     cout<<zigzag_conversion(str,numrow)<<endl;
     return 0;
 }
+
+

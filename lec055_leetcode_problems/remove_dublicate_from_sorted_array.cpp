@@ -2,18 +2,26 @@
 #include <time.h>
 using namespace std;
 int remove_dublicate(vector<int> &v){
-   int i = 0;
-   for(int j = 1;j<v.size();j++){
-    if(v[i]!=v[j]){
-        i++;
-        v[i]=v[j];
+    int i = 1;
+    for(int j = 1;j<v.size();j++){
+        if(v[j]!=v[j-1]){
+            v[i] = v[j];
+            i++;
+        }
     }
-   }
-   return i+1;
+    return i;
+//    int i = 0;
+//    for(int j = 1;j<v.size();j++){
+//     if(v[i]!=v[j]){
+//         i++;
+//         v[i]=v[j];
+//     }
+//    }
+//    return i+1;
 
 }
 int main(){
-    vector<int> v = {0,0,1,1,1,2,2,3,3,4};
+    vector<int> v = {0,0,1,1,1,2,2};
     clock_t tStart = clock();
     int ans = remove_dublicate(v);
     for(int i = 0;i<ans;i++){
