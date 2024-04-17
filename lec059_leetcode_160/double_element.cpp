@@ -29,13 +29,6 @@ int main()
     int arr[] = {3,2,1,1,4,3};
     int n = sizeof(arr) / sizeof(arr[0]);
     vector out = twoRepeated(arr, n - 2);
-    for (auto i : out)
-    {
-        cout << i << " ";
-    }
-    cout << endl;
-    cout << endl;
     printf("Time taken: %.2fms", (double)(clock() - tStart) / (CLOCKS_PER_SEC / 1000000));
-    cout << endl;
     return 0;
 }
