@@ -7,7 +7,7 @@ int jump(vector<int>&v){
     jumps[0]=0;
     for(int i = 0;i<k;i++){
         for(int j = 0;j<i;j++){
-            if(i<=j+v[j]){
+            if(i<=(j+v[j])){
                 jumps[i] = min(jumps[i],jumps[j]+1);
             }
         }
