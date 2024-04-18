@@ -4,8 +4,6 @@ using namespace std;
 int climbing(int n){
     //calculate the ways to climb the n number of stairs
     if(n<=2)  return n;
-
-
     return 0;
 }
 int main()
