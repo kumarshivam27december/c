@@ -1,8 +1,10 @@
 {
     "C_Cpp.errorSquiggles": "enabled",
     "files.associations": {
+        "*html": "html",
         "deque": "cpp",
         "string": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "iostream": "cpp"
     }
 }
