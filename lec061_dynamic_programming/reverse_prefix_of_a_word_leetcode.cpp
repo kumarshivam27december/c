@@ -9,8 +9,6 @@ using namespace std;
                 break;
             }
         }
-
-
         int k = 0;
         int l = inx;
         while(k<l){
