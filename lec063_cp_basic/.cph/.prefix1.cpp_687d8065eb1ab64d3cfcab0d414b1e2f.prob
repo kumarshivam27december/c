@@ -1,1 +1,0 @@
-{"name":"Local: prefix1","url":"/home/shivam/workspace/c/lec063_cp_basic/prefix1.cpp","tests":[{"id":1719909941219,"input":"6\n3 6 20 23 6 2\n3\n3 4 1\n1 3 5\n2 3 9","output":"3 11 34 38 7 2"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/shivam/workspace/c/lec063_cp_basic/prefix1.cpp","group":"local","local":true}
