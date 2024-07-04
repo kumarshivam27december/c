@@ -103,7 +103,7 @@ node* deletion(node* root,int key){
 			free(root);
 			return temp;
 		}
-		//case 3
+		// case 3   //when none of them is null in that case
 		node* temp = inordersucc(root);
 		root->data = temp->data;
 		root->right = deletion(root->right,temp->data);
