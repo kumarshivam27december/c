@@ -10,12 +10,13 @@ bool checkprime(int n){
     return true;
 }
 int main(){
-    int n;
-    cin>>n;
-    if(checkprime(n)){
+    // int n;
+    // cin>>n;
+    if(checkprime(20)){
         cout<<"yes";
     }else{
         cout<<"no";
-    }
+    }cout<<endl;
+    cout<<(8+1/6);
     return 0;
 }
