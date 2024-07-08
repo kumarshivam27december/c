@@ -9,7 +9,7 @@ int count_divisor(int n){
             n=n/i;
         }
     }
-
+    cout<<mp.size()<<endl;
    return mp.size();
 }
 void findcout(int n){
@@ -27,13 +27,20 @@ void findcout(int n){
         product*=(i.second+1);
     }
 
-    cout<<product<<endl;
+    cout<<"total no of divisors is "<<product<<endl;
 }
 void findsum(int n){
 
 }
 void findproduct(int n){
-
+    int k = count_divisor(n);
+    if(k%2){
+        //odd
+        cout<<"product of divisors is "<<(pow(n,(k/2)))<<endl;
+    }else{
+        //even
+        cout<<"product of divisors is "<<(pow(n,(k/2))*(sqrt(n)))<<endl;
+    }
 }
 int main()
 {
