@@ -1,0 +1,1 @@
+{"name":"Local: combinatory_permutation","url":"/home/shivam/workspace/c/lec065_number_theory/combinatory_permutation.cpp","tests":[{"id":1720457606378,"input":"1\n3 3","output":"6"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"/home/shivam/workspace/c/lec065_number_theory/combinatory_permutation.cpp","group":"local","local":true}
