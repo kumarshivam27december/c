@@ -71,11 +71,9 @@ long long bin_exp(long long a,long long b,long long int M){
 }
 
 long long etf(long long a,long long b,long long c,long long int M){
-    // a^(b^c)%M
+    // a^((b^c)%M-1)%M
     long long result = bin_exp(b,c,M-1);
-    cout<<"b^c is "<<result<<endl;
     long long ans = bin_exp(a,result,M);
-    cout<<"a^b^c is "<<ans<<endl;
 
     return ans;
 }
