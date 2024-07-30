@@ -13,7 +13,7 @@ bool ispresent(string &s1,string &s2,int i,int j){
 
     for(int i = 0;i<v.size();i++){
     	if(v[i]==false){
-		return false;
+		return false; 
 	}
     }
     return true;
