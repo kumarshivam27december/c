@@ -24,3 +24,8 @@ concept covered
 21.tree
 22.dynamic programming
 23.graphs
+along with that some of the projects
+like authentication in c++
+banking system 
+question management system
+
