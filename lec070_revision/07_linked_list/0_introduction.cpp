@@ -58,7 +58,6 @@ void insertAtPosition(Node* &head,int position,int val){
     Node* newvar = temp->next;
     temp->next = n;
     n->next = newvar;
-    
 }
 void deleteAtPosition(Node* &head,int position){
     if(position==0){
@@ -70,11 +69,7 @@ void deleteAtPosition(Node* &head,int position){
     while(position--){
         temp = temp->next;
     }
-
     temp->next = temp->next->next;
-}
-void deleteByNumber(){
-
 }
 void printLL(Node* &head){
     Node* temp = head;
@@ -83,11 +78,81 @@ void printLL(Node* &head){
         temp = temp->next;
     }
 }
-void reverse(){
-
+Node* reverse(Node* &head){
+    Node* previous = NULL;
+    Node* current = head;
+    Node* nextnode;
+    while(current!=NULL){
+        nextnode = current->next;
+        current->next = previous;
+        previous = current;
+        current = nextnode;
+    }
+    return previous;
 }
-void detect_cycle(){
-
+Node* recursive_reverse(Node* &head){
+    if(head==NULL || head->next==NULL){
+        return head;
+    }
+    Node* nextnode = recursive_reverse(head->next);
+    head->next->next = head;
+    head->next = NULL;
+    return nextnode;
+}
+bool detect_cycle(Node* &head){
+    Node* fast = head;
+    Node* slow = head;
+    while(fast!=NULL && fast->next!=NULL){
+        slow = slow->next;
+        fast = fast->next->next;
+        if(slow==fast){
+            return true;
+        }
+    }
+    return false;
+    
+}
+bool detect_cycle_2(Node* &head){
+    unordered_set<Node*> st;
+        while(head){
+            if(st.find(head)!=st.end()){
+                return true;
+            }
+            st.insert(head);
+            head= head->next;
+        }
+        return false;
+    
+}
+Node* detect_cycle3(Node* &head){
+    Node* slow = head;
+    Node* fast = head;
+    while (fast!=NULL and fast->next!=NULL){
+        slow = slow->next;
+        fast = fast->next->next;
+        if(slow==fast){
+            return slow;
+        }
+    }
+    return NULL;
+}
+Node* detectFirstNode(Node* &head){
+    Node* meet = detect_cycle3(head);
+    Node* start = head;
+    while(start!=meet){
+        start = start->next;
+        meet = meet->next;
+    }
+    return start;
+}
+Node* middleNode(Node* head) {
+        Node* slow = head;
+        Node* fast = head;
+        while(fast and fast->next){
+            slow  = slow->next;
+            fast = fast->next->next;
+        }
+        return slow;
 }
 int main(){
     Node* head = NULL;
@@ -128,6 +193,17 @@ int main(){
     printLL(head);
     cout<<endl;
     deleteAtPosition(head,0);
+    printLL(head);
+    cout<<endl;
+    cout<<"Before reversing"<<endl;
+    printLL(head);
+    cout<<endl;
+    cout<<"After reversing"<<endl;
+    head = reverse(head);
+    printLL(head);
+    cout<<endl;
+    cout<<"Reverse Recursion"<<endl;
+    head = recursive_reverse(head);
     printLL(head);
     cout<<endl;
 }
