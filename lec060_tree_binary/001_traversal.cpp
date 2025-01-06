@@ -31,7 +31,6 @@ void pretraverse(node* root){
     }cout<<root->key<<" ";
     pretraverse(root->left);
     pretraverse(root->right);
-
 }
 void posttraverse(node* root){
     if(root==nullptr){
@@ -40,20 +39,16 @@ void posttraverse(node* root){
     pretraverse(root->left);
     pretraverse(root->right);
     cout<<root->key<<" ";
-
-
 }
-
 void intraverse(node* root){
     if(root==nullptr){
         return;
     }
-    pretraverse(root->left);
+    intraverse(root->left);
     cout<<root->key<<" ";
-    pretraverse(root->right);
+    intraverse(root->right);
 
 }
-
 int main() {
     node* root = nullptr;
     int numNodes;
