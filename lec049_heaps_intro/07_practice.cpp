@@ -8,7 +8,6 @@ class heap{
         arr[0] =-1;
         size = 0;
     }
-
     void insert(int value){
         size++;
         int index  = size;
@@ -26,7 +25,6 @@ class heap{
             
         }
     }
-
     void deletion(int element){
         if (size==0)
         {
@@ -53,7 +51,6 @@ class heap{
         //step 1
         arr[index]= arr[size];
         size--;
-
         int i = index;
         while(i<size){
             int leftch = 2*i;
@@ -70,15 +67,8 @@ class heap{
             }
             else{
                 return;
-            }
-    
-            
-        }
-
-
-        
-        
-        
+            }            
+        }  
     }
     void print(){
         for(int i=1;i<=size;i++){
@@ -86,7 +76,6 @@ class heap{
         }cout<<endl;
     }
 };
-
 void heapify(int arr[],int size,int i){
     int largest = i;
     int left = 2*i;
@@ -105,7 +94,6 @@ void heapify(int arr[],int size,int i){
     }
 
 }
-
 void heapsort(int arr[],int size){
     int n = size;
     while(n>1){
@@ -114,7 +102,6 @@ void heapsort(int arr[],int size){
 
         heapify(arr,n,1);
     }
-
 }
 int main()
 {
@@ -129,9 +116,6 @@ int main()
     h.print();
     h.deletion(54);
     h.print();
-
-
-
     //heap creation
     int arr1[6] = {-1,50,55,53,52,54};
     int n = 5;
@@ -139,17 +123,11 @@ int main()
     {
         heapify(arr1,n,i);
     }
-
-
     cout<<"printing the array now"<<endl;
-
-
     for (int i = 1; i <= n; i++)
     {
        cout<<arr1[i]<<" ";
     }cout<<endl;
-
-
     //heapsort
     cout<<"After heap sort"<<endl;
     heapsort(arr1,n);

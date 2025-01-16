@@ -81,7 +81,6 @@ void heapify(int arr[], int size, int i) {
     if (rc <= size && arr[largest] < arr[rc]) {
         largest = rc;
     }
-
     if (largest != i) {
         swap(arr[largest], arr[i]);
         heapify(arr, size, largest);

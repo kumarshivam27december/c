@@ -76,10 +76,10 @@ node* insert(node* root,int val){
 	return root;
 	
 }
-node* inordersucc(node* root){
+node*  inordersucc(node* root){
 	node* curr = root;
 	while(curr && curr->left != NULL){
-		curr = curr->left;
+		 curr = curr->left;
 	}
 	return curr;
 }
@@ -104,7 +104,7 @@ node* deletion(node* root,int key){
 			return temp;
 		}
 		// case 3   //when none of them is null in that case
-		node* temp = inordersucc(root);
+		node* temp = inordersucc(root->right);
 		root->data = temp->data;
 		root->right = deletion(root->right,temp->data);
 	}

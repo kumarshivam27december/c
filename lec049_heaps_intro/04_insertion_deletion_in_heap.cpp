@@ -8,12 +8,10 @@ class heap{
         arr[0] = -1;
         size=0;
     }
-
     void insert(int value){
         size++;
         int index = size;
         arr[index] = value;
-
         //compare
         while(index>1){
             int parent = index/2;
@@ -25,17 +23,13 @@ class heap{
             else{
                 return;
             }
-            
         }
-
     }
-
     void print(){
         for(int i=1;i<=size;i++){
             cout<<arr[i]<<" ";
         }cout<<endl;
     }
-
     void deletion(){
         if (size==0)
         {
@@ -160,7 +154,6 @@ void heapsort(int arr[],int size){
         //step 1 
         swap(arr[n],arr[1]);
         n--;
-
         //step 2
         heapify(arr,n,1);
     }
