@@ -4,7 +4,6 @@
 using namespace std;
 
 const int INF = 1e9;
-
 struct Edge {
     int u, v, w;
 };
@@ -12,7 +11,6 @@ struct Edge {
 void bellmanFord(int V, int src, const vector<Edge>& edges, vector<int>& dist) {
     dist.assign(V, INF);
     dist[src] = 0;
-
     for (int i = 0; i < V - 1; ++i) {
         for (const auto& edge : edges) {
             if (dist[edge.u] != INF && dist[edge.u] + edge.ws < dist[edge.v]) {
