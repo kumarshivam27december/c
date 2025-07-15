@@ -16,7 +16,7 @@ int main() {
     freopen("output.txt", "w", stdout);
 
 #endif
-    int n = 4; // number of nodes
+    int n = 4;
     vector<Edge> edges = {
         {0, 1, 10}, {0, 2, 6}, {0, 3, 5},
         {1, 3, 15}, {2, 3, 4}
