@@ -21,6 +21,7 @@ void dijkstra(int source, vector<vector<vector<int>>>& graph, vector<int>& dist,
 
         if (d > dist[u]) continue;
 
+
         for (int i = 0; i < graph[u].size(); i++) {
             int v = graph[u][i][0];
             int w = graph[u][i][1];
